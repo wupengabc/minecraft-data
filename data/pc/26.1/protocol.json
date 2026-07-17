@@ -1293,35 +1293,14 @@
                 ],
                 "bucket_entity_data": "anonymousNbt",
                 "instrument": [
-                  "container",
-                  [
-                    {
-                      "name": "hasHolder",
-                      "type": "bool"
-                    },
-                    {
+                  "registryEntryHolder",
+                  {
+                    "baseName": "instrumentId",
+                    "otherwise": {
                       "name": "data",
-                      "type": [
-                        "switch",
-                        {
-                          "compareTo": "hasHolder",
-                          "fields": {
-                            "true": [
-                              "registryEntryHolder",
-                              {
-                                "baseName": "instrumentId",
-                                "otherwise": {
-                                  "name": "data",
-                                  "type": "InstrumentData"
-                                }
-                              }
-                            ],
-                            "false": "string"
-                          }
-                        }
-                      ]
+                      "type": "InstrumentData"
                     }
-                  ]
+                  }
                 ],
                 "provides_trim_material": [
                   "container",
